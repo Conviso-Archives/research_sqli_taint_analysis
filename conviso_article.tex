@@ -1,0 +1,33 @@
+\documentclass[a4paper,10pt]{article}
+
+\usepackage{cite}
+\usepackage[pdftex]{graphicx}
+\usepackage[cmex10]{amsmath}
+\interdisplaylinepenalty=2500
+\usepackage{algorithmic}
+\usepackage{algorithm}
+\usepackage{url}
+\usepackage{array}
+\usepackage{listings}
+\usepackage{eqparbox}
+\usepackage{fixltx2e}
+\usepackage{hyperref}
+\usepackage{subfig}
+\renewcommand*\lstlistingname{Code}
+
+\begin{document}
+  \input{pagetitle}
+
+  \begin{abstract}
+	According to our $2012$ internal technical balance, $73\%$ of all vulnerabilities found during code-review projects were related to Input Data Validation. Most of them are composed by SQL Injection flaws targeting WEB systems. For this paper we used concepts of Taint Analysis for statically uncover SQL Injection flaws on PHP based source code (once most of tested systems along 2012 still use this technology -- $46\%$). However, the proposed technique can be applied for analysing any type of source code which interfaces with a database. Results show us that the proposed method can successfully uncover real world SQL injection flaws on PHP code.
+  \end{abstract}
+
+  \input{section/001_introduction}
+  \input{section/002_theory}
+  \input{section/003_contribution}
+  \input{section/004_experiment}
+  \input{section/005_conclusion}
+
+  \bibliographystyle{ieeetr}
+  \bibliography{bibliography}
+\end{document}
